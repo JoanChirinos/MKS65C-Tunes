@@ -24,7 +24,7 @@ int main() {
   struct song* s10 = make_song("? & The Mysterians", "96 Tears");
   struct song* s11 = make_song("? & The Mysterians", "Up Side");
   struct song* s12 = make_song("Joan Chirinos", "Mixtape-o Numero Uno");
-
+  free(s12);
   printf("====================\n LINKED LIST TESTS \n====================\n");
 
   printf("\n=== COMPARING SONGS ===\n");
@@ -131,6 +131,9 @@ int main() {
   printf("songs:\n");
   print_songs(head);
 
+  free(s12);
+  s12 = NULL;
+
   printf("\n====================\nMUSIC LIBRARY TESTS\n====================\n\n");
 
   s1 = make_song("Leslie Odom Jr.", "A Winter's Ball");
@@ -223,4 +226,7 @@ int main() {
   lib = clear_library(lib);
   //printf("freed\n");
   print_library(lib);
+
+  free(s12);
+  s12 = NULL;
 }

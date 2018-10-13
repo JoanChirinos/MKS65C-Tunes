@@ -11,7 +11,7 @@ int main() {
   srand(t);
   printf("SEED: %lu\n", t);
 
-  struct song* head;
+  struct song* head = NULL;
   struct song* s1 = make_song("Leslie Odom Jr.", "A Winter's Ball");
   struct song* s2 = make_song("Philipa Soo", "Burn");
   struct song* s3 = make_song("Watsky", "Don't Be Nice");

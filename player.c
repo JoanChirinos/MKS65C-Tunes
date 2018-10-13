@@ -148,8 +148,8 @@ struct library* clear_library(struct library* lib) {
     lib->letter[i] = free_list(lib->letter[i]);
   }
   //printf("freed each song list\n");
-  free(lib->letter);
-  //free(lib);
+  //free(lib->letter);
+  free(lib);
   lib = NULL;
   return lib;
 }

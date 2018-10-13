@@ -42,6 +42,7 @@ int main() {
   printf("\n=== INSERTING SONGS (alpha) ===\n");
   head = insert_alpha(head, s1);
   print_songs(head);
+  printf("\n");
   head = insert_alpha(head, s2);
   // print_songs(head);
   head = insert_alpha(head, s3);

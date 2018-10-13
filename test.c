@@ -6,8 +6,8 @@
 
 int main() {
   unsigned long t;
-  // t = time(NULL);
-  t = 1539400079;
+   t = time(NULL);
+  //t = <debug val>;
   srand(t);
   printf("SEED: %lu\n", t);
 
@@ -223,7 +223,10 @@ int main() {
   lib = delete_song(lib, s12);
   print_library(lib);
 
-  printf("=== CLEARING LIB ===\n");
+  printf("\n=== SHUFFLING SONGS ===\n");
+  shuffle(lib);
+
+  printf("\n=== CLEARING LIB ===\n");
   lib = clear_library(lib);
   //printf("freed\n");
   print_library(lib);

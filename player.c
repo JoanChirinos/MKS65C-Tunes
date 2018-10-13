@@ -153,3 +153,18 @@ struct library* clear_library(struct library* lib) {
   lib = NULL;
   return lib;
 }
+
+void shuffle(struct library* lib) {
+  printf("5 random songs:\n");
+  int i;
+  struct song* rnd_song;
+  struct song* p;
+  for (i = 0; i < 5; i++) {
+    p = NULL;
+    while(p == NULL) {
+      p = lib->letter[rand() % 27];
+    }
+    rnd_song = random_song(p);
+    print_song(rnd_song);
+  }
+}

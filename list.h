@@ -1,3 +1,6 @@
+#ifndef LIST_H
+#define LIST_H
+
 struct song {char name[100]; char artist[100]; struct song* next;};
 
 struct song* make_song(char*, char*);
@@ -25,3 +28,5 @@ struct song* remove_song(struct song*, struct song*);
 //HELPERS
 
 int song_comp(struct song*, struct song*);
+
+#endif

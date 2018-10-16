@@ -1,4 +1,9 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
 struct library {struct song* letter[27];};
+
+struct library* make_lib();
 
 struct library* add_song(struct library*, struct song*);
 
@@ -17,3 +22,5 @@ void shuffle(struct library*);
 struct library* delete_song(struct library*, struct song*);
 
 struct library* clear_library(struct library*);
+
+#endif

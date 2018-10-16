@@ -7,11 +7,9 @@
 /* ========== HELPERS ========== */
 int song_comp(struct song* s1, struct song* s2) {
   //printf("Comparing\n\t%s: %s\n\t%s: %s\n", s1->artist, s1->name, s2->artist, s2->name);
-  if (strcmp(s1->artist, s2->artist) < 0) return -1;
-  else if (strcmp(s1->artist, s2->artist) > 0) return 1;
-  else if (strcmp(s1->name, s2->name) < 0) return -1;
-  else if (strcmp(s1->name, s2->name) > 0) return 1;
-  return 0;
+  int a = strcmp(s1->artist, s2->artist);
+  if (a != 0) return a;
+  return strcmp(s1->name, s2->name);
 }
 
 struct song* find_previous_node(struct song* n, struct song* to_find) {

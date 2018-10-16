@@ -1,5 +1,5 @@
 compile: player.o list.o test.o
-	gcc test.o
+	gcc test.o list.o player.o
 
 run:
 	./a.out

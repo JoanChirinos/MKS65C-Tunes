@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "player.h"
-#include "list.c"
+#include "list.h"
 
 struct library* make_lib() {
   struct library* lib = calloc(sizeof(struct song), 27);
@@ -155,7 +157,7 @@ struct library* clear_library(struct library* lib) {
 }
 
 void shuffle(struct library* lib) {
-  printf("5 random songs:\n");
+  printf("5 random(ish) songs:\n");
   int i;
   struct song* rnd_song;
   struct song* p;

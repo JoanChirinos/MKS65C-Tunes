@@ -2,8 +2,8 @@
 #include <time.h>
 #include <stdlib.h>
 
-#include "list.h"
 #include "player.h"
+#include "list.h"
 
 int main() {
   unsigned long t;
